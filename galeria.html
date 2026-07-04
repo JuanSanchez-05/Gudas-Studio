@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Galería de fotos y videos de GUDAS STUDIO. Presentaciones, clases y momentos especiales de nuestro estudio de baile en Atlixco, Puebla.">
+  <title>Galería | GUDAS STUDIO</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/png" href="Logos/GS-6.png">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo" aria-label="GUDAS STUDIO Home">
+        <img src="Logos/IMG-20220317-WA0044.jpg" alt="GUDAS STUDIO Logo">
+      </a>
+      <nav class="header__nav" id="main-nav" aria-label="Navegación principal">
+        <a href="index.html" class="nav__link">Inicio</a>
+        <a href="clases.html" class="nav__link">Clases</a>
+        <a href="horarios.html" class="nav__link">Horarios</a>
+        <a href="nosotros.html" class="nav__link">Nosotros</a>
+        <a href="galeria.html" class="nav__link active">Galería</a>
+        <a href="contacto.html" class="nav__link">Contacto</a>
+        <a href="contacto.html" class="nav__cta">Únete Ahora</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero" style="background-image: url('Fotos/DSC_2787.jpg');">
+    <div class="page-hero__content">
+      <span class="section__subtitle" style="font-size: 1.5rem;">Nuestra energía en imágenes</span>
+      <h1 class="page-hero__title"><span class="text-gradient">Galería</span></h1>
+      <p class="page-hero__subtitle">Momentos que capturan la esencia del baile</p>
+    </div>
+  </section>
+
+  <!-- Gallery Section: Photos -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__subtitle">Capturas del estudio</span>
+        <h2 class="section__title">Fotos de <span class="text-gradient">Presentaciones</span></h2>
+        <div class="section-divider"></div>
+        <p class="section__desc">Cada imagen cuenta una historia de pasión, esfuerzo y arte sobre el escenario.</p>
+      </div>
+
+      <div class="gallery-grid reveal">
+        <!-- Row 1 -->
+        <div class="gallery-item gallery-item--tall">
+          <img src="Fotos/DSC_2929.jpg" alt="Bailarín en escenario con iluminación dramática">
+          <div class="gallery-item__overlay"><span>Ver Foto</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Fotos/DSC_2787.jpg" alt="Presentación de danza contemporánea">
+          <div class="gallery-item__overlay"><span>Ver Foto</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Fotos/DSC_2795.jpg" alt="Bailarines en coreografía grupal">
+          <div class="gallery-item__overlay"><span>Ver Foto</span></div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="gallery-item gallery-item--wide">
+          <img src="Fotos/DSC_2886.jpg" alt="Vista panorámica de presentación de baile">
+          <div class="gallery-item__overlay"><span>Ver Foto</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Fotos/DSC_2922.jpg" alt="Bailarín solista bajo las luces">
+          <div class="gallery-item__overlay"><span>Ver Foto</span></div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="gallery-item">
+          <img src="Fotos/DSC_2928.jpg" alt="Momento intenso de danza en vivo">
+          <div class="gallery-item__overlay"><span>Ver Foto</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Fotos/DSC_2787.jpg" alt="Escena artística de danza">
+          <div class="gallery-item__overlay"><span>Ver Foto</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Fotos/DSC_2795.jpg" alt="Energía en el escenario de GUDAS STUDIO">
+          <div class="gallery-item__overlay"><span>Ver Foto</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos Section -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__subtitle">En movimiento</span>
+        <h2 class="section__title">Videos de <span class="text-gradient">Presentaciones</span></h2>
+        <div class="section-divider"></div>
+        <p class="section__desc">Siente la energía de nuestras presentaciones en vivo.</p>
+      </div>
+
+      <div class="grid grid--2 stagger-children">
+        <div class="video-container" id="video1">
+          <video poster="Fotos/DSC_2886.jpg" preload="metadata">
+            <source src="Videos/01.mp4" type="video/mp4">
+            Tu navegador no soporta video HTML5.
+          </video>
+          <div class="video-container__play" onclick="playVideo('video1')"></div>
+        </div>
+        <div class="video-container" id="video2">
+          <video poster="Fotos/DSC_2928.jpg" preload="metadata">
+            <source src="Videos/06.mp4" type="video/mp4">
+            Tu navegador no soporta video HTML5.
+          </video>
+          <div class="video-container__play" onclick="playVideo('video2')"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="cta-banner__bg">
+      <img src="Fotos/DSC_2922.jpg" alt="Bailarines GUDAS STUDIO">
+    </div>
+    <div class="container">
+      <div class="cta-banner__content reveal">
+        <span class="section__subtitle" style="font-size: 1.5rem;">¿Te gustó lo que viste?</span>
+        <h2>Sé parte de la <span class="text-gradient">próxima presentación</span></h2>
+        <p>Únete a GUDAS STUDIO y vive la experiencia de bailar en escenario.</p>
+        <a href="contacto.html" class="btn btn--primary btn--large">Inscribirse <span class="btn__icon">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="Logos/IMG-20220317-WA0044.jpg" alt="GUDAS STUDIO">
+          <p>Estudio de baile dedicado a transformar vidas a través del movimiento y la expresión artística en Atlixco, Puebla.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="TikTok">🎵</a>
+            <a href="#" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__title">Navegación</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="clases.html">Clases</a></li>
+            <li><a href="horarios.html">Horarios</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Más</h4>
+          <ul class="footer__links">
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Contacto</h4>
+          <ul class="footer__links">
+            <li>📍 3 Poniente #305, Centro</li>
+            <li>🏙️ Atlixco, Puebla, México</li>
+            <li>🕐 Lun-Vie: 9AM - 9PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 GUDAS STUDIO. Todos los derechos reservados.</p>
+        <p>Diseñado con 💚 en Atlixco, Puebla</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" aria-label="Cerrar">&times;</button>
+    <div class="lightbox__content"></div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    function playVideo(containerId) {
+      const container = document.getElementById(containerId);
+      const video = container.querySelector('video');
+      const playOverlay = container.querySelector('.video-container__play');
+      
+      if (video.paused) {
+        video.play();
+        playOverlay.style.opacity = '0';
+        playOverlay.style.pointerEvents = 'none';
+        video.controls = true;
+      }
+      
+      video.addEventListener('pause', () => {
+        playOverlay.style.opacity = '1';
+        playOverlay.style.pointerEvents = 'auto';
+      });
+
+      video.addEventListener('ended', () => {
+        playOverlay.style.opacity = '1';
+        playOverlay.style.pointerEvents = 'auto';
+        video.controls = false;
+      });
+    }
+  </script>
+</body>
+</html>

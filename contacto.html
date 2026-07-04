@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contáctanos en GUDAS STUDIO. Ubicados en 3 Poniente #305, Col. Centro, Atlixco, Puebla. Formulario de contacto y mapa.">
+  <title>Contacto | GUDAS STUDIO</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/png" href="Logos/GS-6.png">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo" aria-label="GUDAS STUDIO Home">
+        <img src="Logos/IMG-20220317-WA0044.jpg" alt="GUDAS STUDIO Logo">
+      </a>
+      <nav class="header__nav" id="main-nav" aria-label="Navegación principal">
+        <a href="index.html" class="nav__link">Inicio</a>
+        <a href="clases.html" class="nav__link">Clases</a>
+        <a href="horarios.html" class="nav__link">Horarios</a>
+        <a href="nosotros.html" class="nav__link">Nosotros</a>
+        <a href="galeria.html" class="nav__link">Galería</a>
+        <a href="contacto.html" class="nav__link active">Contacto</a>
+        <a href="contacto.html" class="nav__cta">Únete Ahora</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero" style="background-image: url('Fotos/DSC_2886.jpg');">
+    <div class="page-hero__content">
+      <span class="section__subtitle" style="font-size: 1.5rem;">Estamos para ti</span>
+      <h1 class="page-hero__title"><span class="text-gradient">Contáctanos</span></h1>
+      <p class="page-hero__subtitle">¿Tienes preguntas? ¡Escríbenos!</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid reveal">
+        <!-- Contact Form -->
+        <div>
+          <span class="section__subtitle">Envíanos un mensaje</span>
+          <h2 style="margin-bottom: var(--space-md);">¿Listo para <span class="text-gradient">bailar</span>?</h2>
+          <p style="margin-bottom: var(--space-lg);">Completa el formulario y nos pondremos en contacto contigo lo antes posible. ¡Tu primera clase es gratis!</p>
+
+          <form class="contact-form" id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+              </div>
+              <div class="form-group">
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+52 (244) 000-0000">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="interes">¿Qué estilo te interesa?</label>
+              <select id="interes" name="interes">
+                <option value="">Selecciona un estilo</option>
+                <option value="contemporaneo">Danza Contemporánea</option>
+                <option value="hiphop">Hip-Hop</option>
+                <option value="jazz">Jazz</option>
+                <option value="ballet">Ballet Clásico</option>
+                <option value="reggaeton">Reggaetón & Perreo</option>
+                <option value="kpop">K-Pop Dance</option>
+                <option value="folklorica">Danza Folklórica</option>
+                <option value="stretching">Stretching & Flexibilidad</option>
+                <option value="otro">Otro / No estoy seguro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos sobre ti, tu experiencia en baile, o cualquier duda que tengas..." rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--large" style="width: 100%; justify-content: center;">
+              Enviar Mensaje <span class="btn__icon">→</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Map & Info -->
+        <div>
+          <div class="map-container" style="margin-bottom: var(--space-lg);">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.123456!2d-98.4338!3d18.9075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc6c5b2a5e4e9%3A0x0!2s3+Poniente+305%2C+Centro%2C+Atlixco%2C+Pue.!5e0!3m2!1ses!2smx!4v1700000000000!5m2!1ses!2smx"
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="GUDAS STUDIO en Google Maps">
+            </iframe>
+          </div>
+
+          <div class="contact-info">
+            <div class="contact-info__item">
+              <div class="contact-info__icon">📍</div>
+              <div class="contact-info__text">
+                <h4>Dirección</h4>
+                <p>3 Poniente #305, Col. Centro<br>Atlixco, Puebla, México</p>
+              </div>
+            </div>
+            <div class="contact-info__item">
+              <div class="contact-info__icon">🕐</div>
+              <div class="contact-info__text">
+                <h4>Horarios de Atención</h4>
+                <p>Lunes a Viernes: 9:00 AM - 9:00 PM<br>Sábados: 9:00 AM - 2:00 PM<br>Domingos: Cerrado</p>
+              </div>
+            </div>
+            <div class="contact-info__item">
+              <div class="contact-info__icon">📱</div>
+              <div class="contact-info__text">
+                <h4>Redes Sociales</h4>
+                <p>Síguenos para novedades, videos y más</p>
+                <div class="footer__social" style="margin-top: 0.5rem;">
+                  <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">📘</a>
+                  <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">📸</a>
+                  <a href="https://www.tiktok.com" target="_blank" rel="noopener" aria-label="TikTok">🎵</a>
+                  <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="YouTube">▶️</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__subtitle">Resolvemos tus dudas</span>
+        <h2 class="section__title">Preguntas <span class="text-gradient">Frecuentes</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div style="max-width: 800px; margin: 0 auto;" class="stagger-children">
+        <div class="glass-card" style="margin-bottom: 1rem; cursor: pointer;" onclick="this.classList.toggle('faq-open')">
+          <h4 style="display: flex; justify-content: space-between; align-items: center;">
+            ¿Necesito experiencia previa para inscribirme?
+            <span style="transition: transform 0.3s; font-size: 1.2rem;">+</span>
+          </h4>
+          <p style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, margin 0.4s ease; margin: 0;">¡Para nada! Tenemos clases para todos los niveles, desde principiantes absolutos hasta avanzados. Nuestros instructores se adaptan a tu ritmo de aprendizaje.</p>
+        </div>
+        <div class="glass-card" style="margin-bottom: 1rem; cursor: pointer;" onclick="this.classList.toggle('faq-open')">
+          <h4 style="display: flex; justify-content: space-between; align-items: center;">
+            ¿La primera clase realmente es gratis?
+            <span style="transition: transform 0.3s; font-size: 1.2rem;">+</span>
+          </h4>
+          <p style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, margin 0.4s ease; margin: 0;">¡Sí! Tu primera clase de prueba es completamente gratis en cualquier estilo. Ven, prueba y decide si GUDAS es para ti.</p>
+        </div>
+        <div class="glass-card" style="margin-bottom: 1rem; cursor: pointer;" onclick="this.classList.toggle('faq-open')">
+          <h4 style="display: flex; justify-content: space-between; align-items: center;">
+            ¿Qué debo llevar a mi primera clase?
+            <span style="transition: transform 0.3s; font-size: 1.2rem;">+</span>
+          </h4>
+          <p style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, margin 0.4s ease; margin: 0;">Ropa cómoda y deportiva, tenis o zapatos adecuados al estilo de clase, una botella de agua y muchas ganas de bailar.</p>
+        </div>
+        <div class="glass-card" style="margin-bottom: 1rem; cursor: pointer;" onclick="this.classList.toggle('faq-open')">
+          <h4 style="display: flex; justify-content: space-between; align-items: center;">
+            ¿Hay límite de edad?
+            <span style="transition: transform 0.3s; font-size: 1.2rem;">+</span>
+          </h4>
+          <p style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, margin 0.4s ease; margin: 0;">No hay límite de edad. Tenemos alumnos desde los 4 años hasta adultos mayores. El baile es para todos.</p>
+        </div>
+        <div class="glass-card" style="margin-bottom: 1rem; cursor: pointer;" onclick="this.classList.toggle('faq-open')">
+          <h4 style="display: flex; justify-content: space-between; align-items: center;">
+            ¿Puedo tomar clases de varios estilos?
+            <span style="transition: transform 0.3s; font-size: 1.2rem;">+</span>
+          </h4>
+          <p style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, margin 0.4s ease; margin: 0;">¡Claro! Con nuestro Plan Ilimitado puedes acceder a todas las clases de todos los estilos. También puedes tomar clases sueltas de diferentes estilos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="Logos/IMG-20220317-WA0044.jpg" alt="GUDAS STUDIO">
+          <p>Estudio de baile dedicado a transformar vidas a través del movimiento y la expresión artística en Atlixco, Puebla.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="TikTok">🎵</a>
+            <a href="#" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__title">Navegación</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="clases.html">Clases</a></li>
+            <li><a href="horarios.html">Horarios</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Más</h4>
+          <ul class="footer__links">
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Contacto</h4>
+          <ul class="footer__links">
+            <li>📍 3 Poniente #305, Centro</li>
+            <li>🏙️ Atlixco, Puebla, México</li>
+            <li>🕐 Lun-Vie: 9AM - 9PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 GUDAS STUDIO. Todos los derechos reservados.</p>
+        <p>Diseñado con 💚 en Atlixco, Puebla</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    /* FAQ Accordion */
+    const style = document.createElement('style');
+    style.textContent = `
+      .faq-open p {
+        max-height: 200px !important;
+        margin-top: 1rem !important;
+      }
+      .faq-open h4 span {
+        transform: rotate(45deg) !important;
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>

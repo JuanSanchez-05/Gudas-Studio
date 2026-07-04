@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Consulta los horarios de clases de baile en GUDAS STUDIO. Contemporáneo, Hip-Hop, Jazz, Ballet y más. Atlixco, Puebla.">
+  <title>Horarios de Clases | GUDAS STUDIO</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/png" href="Logos/GS-6.png">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo" aria-label="GUDAS STUDIO Home">
+        <img src="Logos/IMG-20220317-WA0044.jpg" alt="GUDAS STUDIO Logo">
+      </a>
+      <nav class="header__nav" id="main-nav" aria-label="Navegación principal">
+        <a href="index.html" class="nav__link">Inicio</a>
+        <a href="clases.html" class="nav__link">Clases</a>
+        <a href="horarios.html" class="nav__link active">Horarios</a>
+        <a href="nosotros.html" class="nav__link">Nosotros</a>
+        <a href="galeria.html" class="nav__link">Galería</a>
+        <a href="contacto.html" class="nav__link">Contacto</a>
+        <a href="contacto.html" class="nav__cta">Únete Ahora</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero" style="background-image: url('Fotos/DSC_2922.jpg');">
+    <div class="page-hero__content">
+      <span class="section__subtitle" style="font-size: 1.5rem;">Planifica tu semana</span>
+      <h1 class="page-hero__title">Horarios de <span class="text-gradient">Clases</span></h1>
+      <p class="page-hero__subtitle">Encuentra el momento perfecto para bailar</p>
+    </div>
+  </section>
+
+  <!-- Schedule Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header reveal">
+        <h2 class="section__title">Calendario <span class="text-gradient">Semanal</span></h2>
+        <div class="section-divider"></div>
+        <p class="section__desc">Filtra por estilo para encontrar tu clase ideal. Los horarios pueden estar sujetos a cambios.</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="schedule-filters reveal">
+        <button class="schedule-filter active" data-filter="all">Todos</button>
+        <button class="schedule-filter" data-filter="contemporaneo">Contemporáneo</button>
+        <button class="schedule-filter" data-filter="hiphop">Hip-Hop</button>
+        <button class="schedule-filter" data-filter="jazz">Jazz</button>
+        <button class="schedule-filter" data-filter="ballet">Ballet</button>
+        <button class="schedule-filter" data-filter="reggaeton">Reggaetón</button>
+        <button class="schedule-filter" data-filter="kpop">K-Pop</button>
+        <button class="schedule-filter" data-filter="folklorica">Folklórica</button>
+      </div>
+
+      <!-- Schedule Table -->
+      <div class="reveal" style="overflow-x: auto;">
+        <table class="schedule-table" id="schedule-table">
+          <thead>
+            <tr>
+              <th>Hora</th>
+              <th>Lunes</th>
+              <th>Martes</th>
+              <th>Miércoles</th>
+              <th>Jueves</th>
+              <th>Viernes</th>
+              <th>Sábado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 9:00 AM -->
+            <tr>
+              <td><strong>9:00</strong></td>
+              <td>
+                <div class="schedule-class" data-category="ballet">
+                  <div class="schedule-class__name">Ballet Clásico</div>
+                  <div class="schedule-class__time">9:00 - 10:30</div>
+                  <div class="schedule-class__instructor">Profa. Laura</div>
+                </div>
+              </td>
+              <td>
+                <div class="schedule-class" data-category="contemporaneo">
+                  <div class="schedule-class__name">Contemporáneo</div>
+                  <div class="schedule-class__time">9:00 - 10:00</div>
+                  <div class="schedule-class__instructor">Profa. Diana</div>
+                </div>
+              </td>
+              <td>
+                <div class="schedule-class" data-category="ballet">
+                  <div class="schedule-class__name">Ballet Clásico</div>
+                  <div class="schedule-class__time">9:00 - 10:30</div>
+                  <div class="schedule-class__instructor">Profa. Laura</div>
+                </div>
+              </td>
+              <td>
+                <div class="schedule-class" data-category="contemporaneo">
+                  <div class="schedule-class__name">Contemporáneo</div>
+                  <div class="schedule-class__time">9:00 - 10:00</div>
+                  <div class="schedule-class__instructor">Profa. Diana</div>
+                </div>
+              </td>
+              <td>
+                <div class="schedule-class" data-category="folklorica">
+                  <div class="schedule-class__name">Folklórica</div>
+                  <div class="schedule-class__time">9:00 - 10:15</div>
+                  <div class="schedule-class__instructor">Prof. Miguel</div>
+                </div>
+              </td>
+              <td>
+                <div class="schedule-class" data-category="hiphop">
+                  <div class="schedule-class__name">Hip-Hop</div>
+                  <div class="schedule-class__time">9:00 - 10:00</div>
+                  <div class="schedule-class__instructor">Prof. Carlos</div>
+                </div>
+              </td>
+            </tr>
+            <!-- 10:30 AM -->
+            <tr>
+              <td><strong>10:30</strong></td>
+              <td>
+                <div class="schedule-class" data-category="contemporaneo">
+                  <div class="schedule-class__name">Contemporáneo</div>
+                  <div class="schedule-class__time">10:30 - 11:30</div>
+                  <div class="schedule-class__instructor">Profa. Diana</div>
+                </div>
+              </td>
+              <td>
+                <div class="schedule-class" data-category="hiphop">
+                  <div class="schedule-class__name">Hip-Hop</div>
+                  <div class="schedule-class__time">10:30 - 11:30</div>
+                  <div class="schedule-class__instructor">Prof. Carlos</div>
+                </div>
+              </td>
+              <td>
+                <div class="schedule-class" data-category="contemporaneo">
+                  <div class="schedule-class__name">Contemporáneo</div>
+                  <div class="schedule-class__time">10:30 - 11:30</div>
+                  <div class="schedule-class__instructor">Profa. Diana</div>
+                </div>
+              </td>
+              <td>
+                <div class="schedule-class" data-category="hiphop">
+                  <div class="schedule-class__name">Hip-Hop</div>
+                  <div class="schedule-class__time">10:30 - 11:30</div>
+                  <div class="schedule-class__instructor">Prof. Carlos</div>
+                </div>
+              </td>
+              <td>
+                <div class="schedule-class" data-category="contemporaneo">
+                  <div class="schedule-class__name">Contemporáneo</div>
+                  <div class="schedule-class__time">10:30 - 11:30</div>
+                  <div class="schedule-class__instructor">Profa. Diana</div>
+                </div>
+              </td>
+              <td>
+                <div class="schedule-class" data-category="kpop">
+                  <div class="schedule-class__name">K-Pop Dance</div>
+                  <div class="schedule-class__time">10:30 - 11:30</div>
+                  <div class="schedule-class__instructor">Profa. Sofía</div>
+                </div>
+              </td>
+            </tr>
+            <!-- 4:00 PM -->
+            <tr>
+              <td><strong>16:00</strong></td>
+              <td>
+                <div class="schedule-class" data-category="jazz">
+                  <div class="schedule-class__name">Jazz</div>
+                  <div class="schedule-class__time">16:00 - 17:15</div>
+                  <div class="schedule-class__instructor">Profa. Ana</div>
+                </div>
+              </td>
+              <td>
+                <div class="schedule-class" data-category="ballet">
+                  <div class="schedule-class__name">Ballet</div>
+                  <div class="schedule-class__time">16:00 - 17:30</div>
+                  <div class="schedule-class__instructor">Profa. Laura</div>
+                </div>
+              </td>
+              <td>
+                <div class="schedule-class" data-category="jazz">
+                  <div class="schedule-class__name">Jazz</div>
+                  <div class="schedule-class__time">16:00 - 17:15</div>
+                  <div class="schedule-class__instructor">Profa. Ana</div>
+                </div>
+              </td>
+              <td>
+                <div class="schedule-class" data-category="ballet">
+                  <div class="schedule-class__name">Ballet</div>
+                  <div class="schedule-class__time">16:00 - 17:30</div>
+                  <div class="schedule-class__instructor">Profa. Laura</div>
+                </div>
+              </td>
+              <td>
+                <div class="schedule-class" data-category="reggaeton">
+                  <div class="schedule-class__name">Reggaetón</div>
+                  <div class="schedule-class__time">16:00 - 17:00</div>
+                  <div class="schedule-class__instructor">Prof. Alex</div>
+                </div>
+              </td>
+              <td>
+                <div class="schedule-class" data-category="contemporaneo">
+                  <div class="schedule-class__name">Contemporáneo</div>
+                  <div class="schedule-class__time">12:00 - 13:00</div>
+                  <div class="schedule-class__instructor">Profa. Diana</div>
+                </div>
+              </td>
+            </tr>
+            <!-- 5:30 PM -->
+            <tr>
+              <td><strong>17:30</strong></td>
+              <td>
+                <div class="schedule-class" data-category="hiphop">
+                  <div class="schedule-class__name">Hip-Hop</div>
+                  <div class="schedule-class__time">17:30 - 18:30</div>
+                  <div class="schedule-class__instructor">Prof. Carlos</div>
+                </div>
+              </td>
+              <td>
+                <div class="schedule-class" data-category="folklorica">
+                  <div class="schedule-class__name">Folklórica</div>
+                  <div class="schedule-class__time">17:30 - 18:45</div>
+                  <div class="schedule-class__instructor">Prof. Miguel</div>
+                </div>
+              </td>
+              <td>
+                <div class="schedule-class" data-category="folklorica">
+                  <div class="schedule-class__name">Folklórica</div>
+                  <div class="schedule-class__time">17:30 - 18:45</div>
+                  <div class="schedule-class__instructor">Prof. Miguel</div>
+                </div>
+              </td>
+              <td>
+                <div class="schedule-class" data-category="reggaeton">
+                  <div class="schedule-class__name">Reggaetón</div>
+                  <div class="schedule-class__time">17:30 - 18:30</div>
+                  <div class="schedule-class__instructor">Prof. Alex</div>
+                </div>
+              </td>
+              <td>
+                <div class="schedule-class" data-category="reggaeton">
+                  <div class="schedule-class__name">Reggaetón</div>
+                  <div class="schedule-class__time">17:30 - 18:30</div>
+                  <div class="schedule-class__instructor">Prof. Alex</div>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+            <!-- 7:00 PM -->
+            <tr>
+              <td><strong>19:00</strong></td>
+              <td>
+                <div class="schedule-class" data-category="contemporaneo">
+                  <div class="schedule-class__name">Contemporáneo</div>
+                  <div class="schedule-class__time">19:00 - 20:00</div>
+                  <div class="schedule-class__instructor">Profa. Diana</div>
+                </div>
+              </td>
+              <td>
+                <div class="schedule-class" data-category="hiphop">
+                  <div class="schedule-class__name">Hip-Hop</div>
+                  <div class="schedule-class__time">19:00 - 20:00</div>
+                  <div class="schedule-class__instructor">Prof. Carlos</div>
+                </div>
+              </td>
+              <td>
+                <div class="schedule-class" data-category="contemporaneo">
+                  <div class="schedule-class__name">Contemporáneo</div>
+                  <div class="schedule-class__time">19:00 - 20:00</div>
+                  <div class="schedule-class__instructor">Profa. Diana</div>
+                </div>
+              </td>
+              <td>
+                <div class="schedule-class" data-category="jazz">
+                  <div class="schedule-class__name">Jazz</div>
+                  <div class="schedule-class__time">19:00 - 20:15</div>
+                  <div class="schedule-class__instructor">Profa. Ana</div>
+                </div>
+              </td>
+              <td>
+                <div class="schedule-class" data-category="kpop">
+                  <div class="schedule-class__name">K-Pop Dance</div>
+                  <div class="schedule-class__time">19:00 - 20:00</div>
+                  <div class="schedule-class__instructor">Profa. Sofía</div>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Note -->
+      <div class="reveal" style="margin-top: 2rem; text-align: center;">
+        <p style="font-size: 0.9rem; color: var(--text-muted);">
+          * Los horarios están sujetos a cambios. Consulta con nosotros para confirmar disponibilidad.<br>
+          * Primera clase de prueba <strong style="color: var(--primary-light);">GRATIS</strong> en cualquier estilo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="cta-banner__bg">
+      <img src="Fotos/DSC_2795.jpg" alt="Bailarines GUDAS STUDIO">
+    </div>
+    <div class="container">
+      <div class="cta-banner__content reveal">
+        <span class="section__subtitle" style="font-size: 1.5rem;">¿Encontraste tu horario ideal?</span>
+        <h2>Reserva tu <span class="text-gradient">lugar</span> ahora</h2>
+        <p>No esperes más. Contáctanos y asegura tu espacio en la clase que más te guste.</p>
+        <a href="contacto.html" class="btn btn--primary btn--large">Reservar Clase <span class="btn__icon">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="Logos/IMG-20220317-WA0044.jpg" alt="GUDAS STUDIO">
+          <p>Estudio de baile dedicado a transformar vidas a través del movimiento y la expresión artística en Atlixco, Puebla.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="TikTok">🎵</a>
+            <a href="#" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__title">Navegación</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="clases.html">Clases</a></li>
+            <li><a href="horarios.html">Horarios</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Más</h4>
+          <ul class="footer__links">
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Contacto</h4>
+          <ul class="footer__links">
+            <li>📍 3 Poniente #305, Centro</li>
+            <li>🏙️ Atlixco, Puebla, México</li>
+            <li>🕐 Lun-Vie: 9AM - 9PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 GUDAS STUDIO. Todos los derechos reservados.</p>
+        <p>Diseñado con 💚 en Atlixco, Puebla</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
