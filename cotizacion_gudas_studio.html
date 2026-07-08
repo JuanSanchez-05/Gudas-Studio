@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cotización - Sitio Web GUDAS STUDIO ACADEMY</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f0f2f5;
+      color: #1a1a2e;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .document {
+      max-width: 850px;
+      margin: 2rem auto;
+      background: #ffffff;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.08);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    /* --- HEADER --- */
+    .doc-header {
+      background: linear-gradient(135deg, #0A0A0A 0%, #0D7377 50%, #095355 100%);
+      padding: 3rem 3.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .doc-header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(17, 153, 158, 0.3), transparent 70%);
+      border-radius: 50%;
+    }
+
+    .doc-header::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(212, 165, 116, 0.15), transparent 70%);
+      border-radius: 50%;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .header-brand h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.3rem;
+    }
+
+    .header-brand .tagline {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      font-weight: 400;
+    }
+
+    .header-info {
+      text-align: right;
+    }
+
+    .doc-type {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+
+    .doc-number {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.05em;
+    }
+
+    .doc-date {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.8);
+      margin-top: 0.3rem;
+    }
+
+    /* --- BODY --- */
+    .doc-body {
+      padding: 2.5rem 3.5rem;
+    }
+
+    /* --- CLIENT INFO --- */
+    .client-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 2px solid #f0f2f5;
+    }
+
+    .info-block h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #0D7377;
+      margin-bottom: 0.8rem;
+    }
+
+    .info-block p {
+      font-size: 0.9rem;
+      color: #444;
+      margin-bottom: 0.2rem;
+    }
+
+    .info-block .name {
+      font-weight: 700;
+      color: #1a1a2e;
+      font-size: 1rem;
+    }
+
+    /* --- INTRO --- */
+    .intro {
+      margin-bottom: 2.5rem;
+      padding: 1.5rem 2rem;
+      background: linear-gradient(135deg, #f8fffe, #f0fafb);
+      border-left: 4px solid #0D7377;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .intro p {
+      font-size: 0.9rem;
+      color: #444;
+    }
+
+    /* --- SECTIONS --- */
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .section-title .icon {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, #0D7377, #11999E);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    /* --- TABLE --- */
+    .quote-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #e8ecef;
+    }
+
+    .quote-table thead {
+      background: #0A0A0A;
+    }
+
+    .quote-table th {
+      padding: 1rem 1.2rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #ffffff;
+      text-align: left;
+    }
+
+    .quote-table th:last-child {
+      text-align: right;
+    }
+
+    .quote-table td {
+      padding: 1rem 1.2rem;
+      font-size: 0.88rem;
+      border-bottom: 1px solid #f0f2f5;
+      color: #444;
+      vertical-align: top;
+    }
+
+    .quote-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .quote-table tbody tr:hover {
+      background: #fafbfc;
+    }
+
+    .quote-table td:last-child {
+      text-align: right;
+      font-weight: 600;
+      color: #1a1a2e;
+      white-space: nowrap;
+    }
+
+    .item-name {
+      font-weight: 600;
+      color: #1a1a2e;
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+
+    .item-desc {
+      font-size: 0.8rem;
+      color: #888;
+      line-height: 1.4;
+    }
+
+    .included-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #0D7377, #11999E);
+      color: white;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* --- TOTAL --- */
+    .total-section {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 2.5rem;
+    }
+
+    .total-box {
+      background: linear-gradient(135deg, #0A0A0A, #1a1a2e);
+      border-radius: 12px;
+      padding: 1.5rem 2.5rem;
+      min-width: 320px;
+    }
+
+    .total-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.4rem 0;
+      gap: 3rem;
+    }
+
+    .total-row .label {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.65);
+    }
+
+    .total-row .value {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.9);
+      font-weight: 600;
+    }
+
+    .total-row.main {
+      border-top: 1px solid rgba(255,255,255,0.15);
+      margin-top: 0.5rem;
+      padding-top: 0.8rem;
+    }
+
+    .total-row.main .label {
+      font-size: 1rem;
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .total-row.main .value {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #11999E;
+    }
+
+    /* --- WHAT'S INCLUDED --- */
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      padding: 0.7rem 1rem;
+      background: #fafbfc;
+      border-radius: 8px;
+      border: 1px solid #f0f2f5;
+    }
+
+    .feature-check {
+      width: 20px;
+      height: 20px;
+      background: linear-gradient(135deg, #0D7377, #11999E);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      color: white;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .feature-text {
+      font-size: 0.82rem;
+      color: #444;
+      line-height: 1.4;
+    }
+
+    .feature-text strong {
+      color: #1a1a2e;
+    }
+
+    /* --- PAYMENT --- */
+    .payment-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .payment-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .payment-card {
+      border: 2px solid #e8ecef;
+      border-radius: 10px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .payment-card.highlight {
+      border-color: #0D7377;
+      background: linear-gradient(135deg, #f8fffe, #f0fafb);
+    }
+
+    .payment-card .payment-phase {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #0D7377;
+      margin-bottom: 0.5rem;
+    }
+
+    .payment-card .payment-amount {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #1a1a2e;
+      margin-bottom: 0.3rem;
+    }
+
+    .payment-card .payment-desc {
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    .payment-note {
+      font-size: 0.82rem;
+      color: #666;
+      text-align: center;
+      font-style: italic;
+      padding: 1rem;
+      background: #fafbfc;
+      border-radius: 8px;
+    }
+
+    /* --- MAINTENANCE --- */
+    .maintenance-box {
+      background: linear-gradient(135deg, #f8fffe, #edf9fa);
+      border: 1px solid #d4ecee;
+      border-radius: 10px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .maintenance-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #0D7377, #11999E);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .maintenance-info h4 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 0.2rem;
+    }
+
+    .maintenance-info p {
+      font-size: 0.85rem;
+      color: #555;
+    }
+
+    .maintenance-price {
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .maintenance-price .amount {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #0D7377;
+    }
+
+    .maintenance-price .period {
+      font-size: 0.75rem;
+      color: #888;
+    }
+
+    /* --- TIMELINE --- */
+    .timeline-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .timeline-bar {
+      display: flex;
+      gap: 0;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #e8ecef;
+    }
+
+    .timeline-step {
+      flex: 1;
+      padding: 1.2rem 1rem;
+      text-align: center;
+      position: relative;
+      background: #fafbfc;
+    }
+
+    .timeline-step:not(:last-child) {
+      border-right: 1px solid #e8ecef;
+    }
+
+    .timeline-step .step-num {
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(135deg, #0D7377, #11999E);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 800;
+      color: white;
+      margin: 0 auto 0.5rem;
+    }
+
+    .timeline-step .step-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 0.15rem;
+    }
+
+    .timeline-step .step-time {
+      font-size: 0.7rem;
+      color: #888;
+    }
+
+    /* --- TERMS --- */
+    .terms-section {
+      margin-bottom: 2rem;
+    }
+
+    .terms-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .terms-list li {
+      font-size: 0.82rem;
+      color: #666;
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      border-bottom: 1px solid #f5f5f5;
+    }
+
+    .terms-list li:last-child {
+      border-bottom: none;
+    }
+
+    .terms-list li::before {
+      content: '›';
+      position: absolute;
+      left: 0.3rem;
+      color: #0D7377;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    /* --- SIGNATURES --- */
+    .signatures {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 2px solid #f0f2f5;
+    }
+
+    .signature-block {
+      text-align: center;
+    }
+
+    .signature-line {
+      width: 100%;
+      height: 1px;
+      background: #ccc;
+      margin-bottom: 0.8rem;
+      margin-top: 4rem;
+    }
+
+    .signature-name {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #1a1a2e;
+    }
+
+    .signature-role {
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    /* --- FOOTER --- */
+    .doc-footer {
+      background: #0A0A0A;
+      padding: 1.5rem 3.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .doc-footer p {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .doc-footer .validity {
+      background: rgba(13, 115, 119, 0.2);
+      border: 1px solid rgba(13, 115, 119, 0.4);
+      color: #11999E;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    /* --- PRINT --- */
+    @media print {
+      body {
+        background: white;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .document {
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      .doc-header, .doc-footer, .total-box,
+      .timeline-step .step-num, .feature-check,
+      .payment-card.highlight, .maintenance-box,
+      .section-title .icon, .included-badge,
+      .quote-table thead {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="document">
+
+    <!-- HEADER -->
+    <div class="doc-header">
+      <div class="header-content">
+        <div class="header-brand">
+          <h1>GUDAS STUDIO</h1>
+          <div class="tagline">Desarrollo Web Profesional</div>
+        </div>
+        <div class="header-info">
+          <div class="doc-type">Cotización</div>
+          <div class="doc-number">COT-GS-2026-001</div>
+          <div class="doc-date">📅 6 de julio de 2026</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BODY -->
+    <div class="doc-body">
+
+      <!-- CLIENT INFO -->
+      <div class="client-section">
+        <div class="info-block">
+          <h3>Elaborado para</h3>
+          <p class="name">GUDAS STUDIO ACADEMY</p>
+          <p>Estudio de Baile</p>
+          <p>3 Poniente #305, Col. Centro</p>
+          <p>Atlixco, Puebla, México</p>
+        </div>
+        <div class="info-block">
+          <h3>Elaborado por</h3>
+          <p class="name">Juan Carlos Sánchez García</p>
+          <p>Diseño y Desarrollo de Sitios Web</p>
+          <p>Atlixco, Puebla, México</p>
+          <p style="margin-top: 0.5rem; color: #0D7377; font-weight: 600;">juancsg0503@gmail.com</p>
+        </div>
+      </div>
+
+      <!-- INTRO -->
+      <div class="intro">
+        <p>Estimado cliente, a continuación se presenta la cotización para el <strong>diseño, desarrollo y puesta en marcha</strong> del sitio web profesional para <strong>GUDAS STUDIO ACADEMY</strong>. El proyecto incluye un sitio web completo de 6 páginas con diseño premium, hosting y dominio incluido por 1 año.</p>
+      </div>
+
+      <!-- SERVICIOS -->
+      <div class="section-title">
+        <div class="icon">📋</div>
+        Desglose de Servicios
+      </div>
+
+      <table class="quote-table">
+        <thead>
+          <tr>
+            <th style="width: 5%;">#</th>
+            <th style="width: 65%;">Concepto</th>
+            <th style="width: 30%;">Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>
+              <span class="item-name">Diseño UI/UX Personalizado</span>
+              <span class="item-desc">Diseño visual premium con dark mode, animaciones, tipografía profesional y paleta de colores personalizada para la marca.</span>
+            </td>
+            <td>Incluido</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>
+              <span class="item-name">Desarrollo Frontend (6 Páginas)</span>
+              <span class="item-desc">Inicio, Clases, Horarios, Nosotros, Galería y Contacto. Código limpio en HTML5, CSS3 y JavaScript vanilla.</span>
+            </td>
+            <td>Incluido</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>
+              <span class="item-name">Diseño Responsivo (Mobile-First)</span>
+              <span class="item-desc">Adaptación completa para todos los dispositivos: móvil, tablet y escritorio con 4 breakpoints optimizados.</span>
+            </td>
+            <td>Incluido</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>
+              <span class="item-name">Animaciones y Efectos Interactivos</span>
+              <span class="item-desc">Scroll reveal, contadores animados, galería con lightbox, menú hamburguesa animado, video backgrounds y parallax.</span>
+            </td>
+            <td>Incluido</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>
+              <span class="item-name">Formulario de Contacto + FAQ Interactivo</span>
+              <span class="item-desc">Formulario con validación, selector de estilos de baile y sección de preguntas frecuentes con acordeón.</span>
+            </td>
+            <td>Incluido</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>
+              <span class="item-name">Sistema de Horarios con Filtros</span>
+              <span class="item-desc">Tabla de horarios semanal interactiva con filtros por estilo de baile en tiempo real.</span>
+            </td>
+            <td>Incluido</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>
+              <span class="item-name">SEO Básico y Optimización</span>
+              <span class="item-desc">Meta tags, Open Graph, estructura semántica HTML5, optimización de imágenes y velocidad de carga.</span>
+            </td>
+            <td>Incluido</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>
+              <span class="item-name">Integración Google Maps</span>
+              <span class="item-desc">Mapa interactivo con la ubicación exacta del estudio en la página de contacto e inicio.</span>
+            </td>
+            <td>Incluido</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>
+              <span class="item-name">Dominio + Hosting (1 Año)</span>
+              <span class="item-desc">Registro de dominio personalizado y servicio de hosting en GoDaddy incluido durante el primer año. <span class="included-badge">🎁 Sin costo</span></span>
+            </td>
+            <td>$0.00</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>
+              <span class="item-name">Puesta en Línea y Configuración</span>
+              <span class="item-desc">Subida del sitio al servidor, configuración del dominio, certificado SSL y pruebas finales de funcionamiento.</span>
+            </td>
+            <td>Incluido</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- TOTAL -->
+      <div class="total-section">
+        <div class="total-box">
+          <div class="total-row">
+            <span class="label">Desarrollo completo</span>
+            <span class="value">$4,600.00</span>
+          </div>
+          <div class="total-row">
+            <span class="label">Dominio + Hosting (1 año)</span>
+            <span class="value" style="color: #11999E;">Incluido</span>
+          </div>
+          <div class="total-row">
+            <span class="label">Descuento</span>
+            <span class="value" style="color: #D4A574;">—</span>
+          </div>
+          <div class="total-row main">
+            <span class="label">INVERSIÓN TOTAL</span>
+            <span class="value">$4,600<small style="font-size: 0.6em; opacity: 0.7;"> MXN</small></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- WHAT'S INCLUDED -->
+      <div class="section-title">
+        <div class="icon">✨</div>
+        Lo Que Incluye Tu Sitio Web
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-check">✓</div>
+          <div class="feature-text"><strong>6 páginas</strong> diseñadas a medida</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check">✓</div>
+          <div class="feature-text"><strong>Diseño premium</strong> dark mode profesional</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check">✓</div>
+          <div class="feature-text"><strong>100% responsivo</strong> en todos los dispositivos</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check">✓</div>
+          <div class="feature-text"><strong>Video backgrounds</strong> en Hero y CTA</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check">✓</div>
+          <div class="feature-text"><strong>Animaciones</strong> y efectos interactivos</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check">✓</div>
+          <div class="feature-text"><strong>Galería</strong> con visor de imágenes</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check">✓</div>
+          <div class="feature-text"><strong>Horarios interactivos</strong> con filtros</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check">✓</div>
+          <div class="feature-text"><strong>Formulario</strong> de contacto funcional</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check">✓</div>
+          <div class="feature-text"><strong>Google Maps</strong> integrado</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check">✓</div>
+          <div class="feature-text"><strong>SEO</strong> optimizado para buscadores</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check">✓</div>
+          <div class="feature-text"><strong>Dominio + hosting</strong> gratis 1 año</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-check">✓</div>
+          <div class="feature-text"><strong>Certificado SSL</strong> (candado seguro)</div>
+        </div>
+      </div>
+
+      <!-- FORMA DE PAGO -->
+      <div class="section-title">
+        <div class="icon">💳</div>
+        Forma de Pago
+      </div>
+
+      <div class="payment-section">
+        <div class="payment-grid">
+          <div class="payment-card highlight">
+            <div class="payment-phase">Primer Pago</div>
+            <div class="payment-amount">$2,300</div>
+            <div class="payment-desc">50% al inicio del desarrollo</div>
+          </div>
+          <div class="payment-card">
+            <div class="payment-phase">Segundo Pago</div>
+            <div class="payment-amount">$2,300</div>
+            <div class="payment-desc">50% al entregar el proyecto</div>
+          </div>
+        </div>
+        <div class="payment-note">
+          💡 La forma de pago es flexible y queda a disposición del cliente. Se aceptan transferencias, depósitos o efectivo.
+        </div>
+      </div>
+
+      <!-- MANTENIMIENTO -->
+      <div class="section-title">
+        <div class="icon">🔧</div>
+        Mantenimiento Mensual
+      </div>
+
+      <div class="maintenance-box">
+        <div class="maintenance-icon">🛡️</div>
+        <div class="maintenance-info">
+          <h4>Plan de Mantenimiento Web</h4>
+          <p>Actualizaciones de contenido, corrección de errores, respaldos y soporte técnico continuo para mantener tu sitio siempre al día.</p>
+        </div>
+        <div class="maintenance-price">
+          <div class="amount">$150</div>
+          <div class="period">MXN / mes</div>
+        </div>
+      </div>
+
+      <!-- TIMELINE -->
+      <div class="section-title">
+        <div class="icon">📅</div>
+        Tiempo Estimado de Entrega
+      </div>
+
+      <div class="timeline-section">
+        <div class="timeline-bar">
+          <div class="timeline-step">
+            <div class="step-num">1</div>
+            <div class="step-title">Planeación</div>
+            <div class="step-time">Semana 1</div>
+          </div>
+          <div class="timeline-step">
+            <div class="step-num">2</div>
+            <div class="step-title">Diseño</div>
+            <div class="step-time">Semana 1-2</div>
+          </div>
+          <div class="timeline-step">
+            <div class="step-num">3</div>
+            <div class="step-title">Desarrollo</div>
+            <div class="step-time">Semana 2-3</div>
+          </div>
+          <div class="timeline-step">
+            <div class="step-num">4</div>
+            <div class="step-title">Pruebas</div>
+            <div class="step-time">Semana 3-4</div>
+          </div>
+          <div class="timeline-step">
+            <div class="step-num">5</div>
+            <div class="step-title">Entrega</div>
+            <div class="step-time">Semana 4</div>
+          </div>
+        </div>
+        <div class="payment-note" style="margin-top: 1rem;">
+          ⏱️ Tiempo estimado: <strong>2 a 4 semanas</strong>, dependiendo de la urgencia y disponibilidad de contenido por parte del cliente.
+        </div>
+      </div>
+
+      <!-- TÉRMINOS -->
+      <div class="section-title">
+        <div class="icon">📝</div>
+        Términos y Condiciones
+      </div>
+
+      <div class="terms-section">
+        <ul class="terms-list">
+          <li>El desarrollo inicia una vez recibido el primer pago (50%).</li>
+          <li>El dominio y hosting están incluidos sin costo por el primer año. A partir del segundo año, el costo de renovación corre por cuenta del cliente.</li>
+          <li>El mantenimiento mensual de $150 MXN cubre actualizaciones menores de contenido, correcciones y soporte técnico básico.</li>
+          <li>Se incluyen hasta 2 rondas de revisiones sobre el diseño aprobado. Cambios adicionales podrían generar un costo extra.</li>
+          <li>El cliente debe proporcionar todo el contenido necesario (textos, fotos, videos, logos) para el desarrollo del sitio.</li>
+          <li>Los tiempos de entrega son estimados y pueden variar según la disponibilidad de contenido por parte del cliente.</li>
+          <li>Una vez entregado y aprobado el proyecto, se realiza el segundo pago (50% restante).</li>
+          <li>El cliente conserva todos los derechos sobre el contenido y diseño final del sitio web.</li>
+          <li>Al finalizar el proyecto, se entrega el <strong>código fuente completo</strong> del sitio web al cliente. En caso de que el cliente decida no continuar con nuestro servicio de hosting, podrá alojar el sitio por su cuenta sin ningún problema ni restricción.</li>
+        </ul>
+      </div>
+
+      <!-- SIGNATURES -->
+      <div class="signatures">
+        <div class="signature-block">
+          <div class="signature-line"></div>
+          <div class="signature-name">Juan Carlos Sánchez García</div>
+          <div class="signature-role">Diseñador y Desarrollador Web</div>
+        </div>
+        <div class="signature-block">
+          <div class="signature-line"></div>
+          <div class="signature-name">Cliente</div>
+          <div class="signature-role">GUDAS STUDIO ACADEMY</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="doc-footer">
+      <p>Cotización generada el 6 de julio de 2026</p>
+      <span class="validity">⏰ Válida por 30 días</span>
+    </div>
+
+  </div>
+
+</body>
+</html>

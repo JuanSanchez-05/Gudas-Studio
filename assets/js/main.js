@@ -11,7 +11,23 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initStatCounters();
   initAnnouncementBar();
+  initNiveles();
 });
+
+/* --- Niveles de Clase Accordion --- */
+function initNiveles() {
+  const items = document.querySelectorAll('.nivel-item');
+  if (!items.length) return;
+
+  items.forEach(item => {
+    const header = item.querySelector('.nivel-header');
+    header.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      items.forEach(i => i.classList.remove('active'));
+      if (!isActive) item.classList.add('active');
+    });
+  });
+}
 
 /* --- Header Scroll Effect --- */
 function initHeader() {

@@ -14,14 +14,15 @@
   <header class="header" id="header">
     <div class="header__inner">
       <a href="index.html" class="header__logo" aria-label="GUDAS STUDIO Home">
-        <img src="Logos/IMG-20220317-WA0044.jpg" alt="GUDAS STUDIO Logo">
+        <img src="Logos/GS-4.png" alt="GUDAS STUDIO Logo">
       </a>
       <nav class="header__nav" id="main-nav" aria-label="Navegación principal">
         <a href="index.html" class="nav__link">Inicio</a>
+        <a href="nosotros.html" class="nav__link">Nosotros</a>
         <a href="clases.html" class="nav__link active">Clases</a>
         <a href="horarios.html" class="nav__link">Horarios</a>
-        <a href="nosotros.html" class="nav__link">Nosotros</a>
         <a href="galeria.html" class="nav__link">Galería</a>
+        <a href="#" class="nav__link">Merch</a>
         <a href="contacto.html" class="nav__link">Contacto</a>
         <a href="contacto.html" class="nav__cta">Únete Ahora</a>
       </nav>
@@ -40,176 +41,176 @@
     </div>
   </section>
 
-  <!-- Intro Section -->
-  <section class="section">
+  <!-- Guía de Niveles de Clase -->
+  <section class="niveles-section" id="niveles">
+    <div class="niveles-bg-text">NIVELES</div>
     <div class="container">
       <div class="section__header reveal">
-        <h2 class="section__title">Clases para <span class="text-gradient">Todos los Niveles</span></h2>
+        <span class="section__subtitle">¿No sabes qué nivel es el mejor para ti?</span>
+        <h2 class="section__title">Guía de <span class="text-gradient">Niveles</span> de Clase</h2>
         <div class="section-divider"></div>
-        <p class="section__desc">Ya seas principiante o avanzado, en GUDAS STUDIO tenemos la clase perfecta para ti. Explora nuestra variedad de estilos y comienza tu viaje.</p>
+        <p class="section__desc">Cada nivel está diseñado para acompañarte en tu crecimiento. Encuentra el tuyo.</p>
       </div>
-
-      <!-- Class Cards Grid -->
-      <div class="grid grid--3 stagger-children">
-        <!-- Contemporáneo -->
-        <div class="card">
-          <div class="card__image">
-            <img src="Fotos/DSC_2787.jpg" alt="Clase de Danza Contemporánea">
-            <span class="card__badge">Popular</span>
-            <div class="card__image-overlay">
-              <a href="contacto.html" class="btn btn--small btn--primary">Inscribirse</a>
+      <div class="niveles-accordion reveal">
+        <div class="nivel-item active" data-color="#4ade80">
+          <button class="nivel-header">
+            <div class="nivel-header__left">
+              <span class="nivel-header__num">01</span>
+              <span class="nivel-header__name">Introducción</span>
             </div>
-          </div>
-          <div class="card__content">
-            <span class="card__tag">Expresión y fluidez</span>
-            <h3 class="card__title">Danza Contemporánea</h3>
-            <p class="card__desc">Explora la libertad del movimiento combinando técnicas modernas con expresión emocional profunda. Desarrolla flexibilidad, fuerza y presencia escénica.</p>
-            <div class="card__meta">
-              <span class="card__meta-item">📅 Lun, Mié, Vie</span>
-              <span class="card__meta-item">⏱ 60 min</span>
-              <span class="card__meta-item">🎯 Todos los niveles</span>
+            <div class="nivel-header__right">
+              <span class="nivel-header__tag" style="background: rgba(74,222,128,0.15); color: #4ade80;">Principiante</span>
+              <span class="nivel-header__icon">+</span>
             </div>
-          </div>
-        </div>
-
-        <!-- Hip-Hop -->
-        <div class="card">
-          <div class="card__image">
-            <img src="Fotos/DSC_2795.jpg" alt="Clase de Hip-Hop Dance">
-            <div class="card__image-overlay">
-              <a href="contacto.html" class="btn btn--small btn--primary">Inscribirse</a>
-            </div>
-          </div>
-          <div class="card__content">
-            <span class="card__tag">Energía urbana</span>
-            <h3 class="card__title">Hip-Hop</h3>
-            <p class="card__desc">Aprende los moves más frescos del street dance. Desde popping y locking hasta choreography moderna con la mejor música urbana.</p>
-            <div class="card__meta">
-              <span class="card__meta-item">📅 Mar, Jue, Sáb</span>
-              <span class="card__meta-item">⏱ 60 min</span>
-              <span class="card__meta-item">🎯 Principiante - Intermedio</span>
+          </button>
+          <div class="nivel-body">
+            <div class="nivel-body__layout">
+              <div class="nivel-body__img">
+                <img src="Fotos/DSC_2787.jpg" alt="Clase de Introducción">
+              </div>
+              <div class="nivel-body__text">
+                <h4>CLASE DE INTRODUCCIÓN</h4>
+                <div class="nivel-difficulty">
+                  <span class="nivel-difficulty__label">Dificultad</span>
+                  <div class="nivel-difficulty__bar"><div class="nivel-difficulty__fill" style="width: 15%; background: #4ade80;"></div></div>
+                </div>
+                <p>Este es el lugar perfecto para comenzar! Nuestras clases de introducción están pensadas especialmente para quienes quieren dar sus <strong>primeros pasos en la danza</strong>, sin importar si nunca han bailado antes.</p>
+              </div>
             </div>
           </div>
         </div>
-
-        <!-- Jazz -->
-        <div class="card">
-          <div class="card__image">
-            <img src="Fotos/DSC_2928.jpg" alt="Clase de Jazz Dance">
-            <span class="card__badge">Nuevo</span>
-            <div class="card__image-overlay">
-              <a href="contacto.html" class="btn btn--small btn--primary">Inscribirse</a>
+        <div class="nivel-item" data-color="#facc15">
+          <button class="nivel-header">
+            <div class="nivel-header__left">
+              <span class="nivel-header__num">02</span>
+              <span class="nivel-header__name">Principiante</span>
             </div>
-          </div>
-          <div class="card__content">
-            <span class="card__tag">Elegancia y técnica</span>
-            <h3 class="card__title">Jazz</h3>
-            <p class="card__desc">Técnica, musicalidad y presencia escénica se combinan en esta disciplina versátil. Ideal para quienes buscan expresión y dinamismo.</p>
-            <div class="card__meta">
-              <span class="card__meta-item">📅 Lun, Mié</span>
-              <span class="card__meta-item">⏱ 75 min</span>
-              <span class="card__meta-item">🎯 Intermedio - Avanzado</span>
+            <div class="nivel-header__right">
+              <span class="nivel-header__tag" style="background: rgba(250,204,21,0.15); color: #facc15;">Básico</span>
+              <span class="nivel-header__icon">+</span>
             </div>
-          </div>
-        </div>
-
-        <!-- Ballet -->
-        <div class="card">
-          <div class="card__image">
-            <img src="Fotos/DSC_2886.jpg" alt="Clase de Ballet Clásico">
-            <div class="card__image-overlay">
-              <a href="contacto.html" class="btn btn--small btn--primary">Inscribirse</a>
-            </div>
-          </div>
-          <div class="card__content">
-            <span class="card__tag">Base técnica</span>
-            <h3 class="card__title">Ballet Clásico</h3>
-            <p class="card__desc">La base de toda danza. Desarrolla postura, gracia y control corporal con técnica clásica en un ambiente cálido y profesional.</p>
-            <div class="card__meta">
-              <span class="card__meta-item">📅 Mar, Jue</span>
-              <span class="card__meta-item">⏱ 90 min</span>
-              <span class="card__meta-item">🎯 Todos los niveles</span>
+          </button>
+          <div class="nivel-body">
+            <div class="nivel-body__layout">
+              <div class="nivel-body__img">
+                <img src="Fotos/DSC_2795.jpg" alt="Clase Principiante">
+              </div>
+              <div class="nivel-body__text">
+                <h4>CLASE PARA PRINCIPIANTES – NIVEL 2</h4>
+                <div class="nivel-difficulty">
+                  <span class="nivel-difficulty__label">Dificultad</span>
+                  <div class="nivel-difficulty__bar"><div class="nivel-difficulty__fill" style="width: 30%; background: #facc15;"></div></div>
+                </div>
+                <p>Esta clase toma como base lo aprendido en la <strong>introducción al baile</strong> y da el siguiente paso: exploraremos coreografías sencillas, mientras reforzamos la <strong>técnica y el estilo</strong> para que sigas avanzando con seguridad.</p>
+              </div>
             </div>
           </div>
         </div>
-
-        <!-- Reggaetón -->
-        <div class="card">
-          <div class="card__image">
-            <img src="Fotos/DSC_2922.jpg" alt="Clase de Reggaetón">
-            <span class="card__badge">🔥 Hot</span>
-            <div class="card__image-overlay">
-              <a href="contacto.html" class="btn btn--small btn--primary">Inscribirse</a>
+        <div class="nivel-item" data-color="#fb923c">
+          <button class="nivel-header">
+            <div class="nivel-header__left">
+              <span class="nivel-header__num">03</span>
+              <span class="nivel-header__name">Intermedio</span>
             </div>
-          </div>
-          <div class="card__content">
-            <span class="card__tag">Ritmo latino</span>
-            <h3 class="card__title">Reggaetón & Perreo</h3>
-            <p class="card__desc">Mueve tu cuerpo al ritmo del reggaetón. Coreografías explosivas, cardio intenso y mucha diversión garantizada.</p>
-            <div class="card__meta">
-              <span class="card__meta-item">📅 Vie, Sáb</span>
-              <span class="card__meta-item">⏱ 60 min</span>
-              <span class="card__meta-item">🎯 Principiante</span>
+            <div class="nivel-header__right">
+              <span class="nivel-header__tag" style="background: rgba(251,146,60,0.15); color: #fb923c;">Medio</span>
+              <span class="nivel-header__icon">+</span>
             </div>
-          </div>
-        </div>
-
-        <!-- K-Pop -->
-        <div class="card">
-          <div class="card__image">
-            <img src="Fotos/DSC_2929.jpg" alt="Clase de K-Pop Dance">
-            <div class="card__image-overlay">
-              <a href="contacto.html" class="btn btn--small btn--primary">Inscribirse</a>
-            </div>
-          </div>
-          <div class="card__content">
-            <span class="card__tag">Tendencia global</span>
-            <h3 class="card__title">K-Pop Dance</h3>
-            <p class="card__desc">Aprende las coreografías de tus grupos favoritos. BTS, BLACKPINK, Stray Kids y más. Divertido y energético.</p>
-            <div class="card__meta">
-              <span class="card__meta-item">📅 Sáb</span>
-              <span class="card__meta-item">⏱ 60 min</span>
-              <span class="card__meta-item">🎯 Todos los niveles</span>
+          </button>
+          <div class="nivel-body">
+            <div class="nivel-body__layout">
+              <div class="nivel-body__img">
+                <img src="Fotos/DSC_2886.jpg" alt="Clase Intermedia">
+              </div>
+              <div class="nivel-body__text">
+                <h4>CLASE INTERMEDIA</h4>
+                <div class="nivel-difficulty">
+                  <span class="nivel-difficulty__label">Dificultad</span>
+                  <div class="nivel-difficulty__bar"><div class="nivel-difficulty__fill" style="width: 50%; background: #fb923c;"></div></div>
+                </div>
+                <p>En este nivel llevamos tu baile al siguiente paso: trabajamos <strong>musicalidad, variaciones de textura y dinámicas</strong> mientras exploramos coreografías más retadoras que pondrán a prueba tu control y expresión.</p>
+              </div>
             </div>
           </div>
         </div>
-
-        <!-- Danza Folklórica -->
-        <div class="card">
-          <div class="card__image">
-            <img src="Fotos/DSC_2787.jpg" alt="Clase de Danza Folklórica">
-            <div class="card__image-overlay">
-              <a href="contacto.html" class="btn btn--small btn--primary">Inscribirse</a>
+        <div class="nivel-item" data-color="#f97316">
+          <button class="nivel-header">
+            <div class="nivel-header__left">
+              <span class="nivel-header__num">04</span>
+              <span class="nivel-header__name">Int/Av</span>
             </div>
-          </div>
-          <div class="card__content">
-            <span class="card__tag">Tradición mexicana</span>
-            <h3 class="card__title">Danza Folklórica</h3>
-            <p class="card__desc">Celebra nuestras raíces con danzas tradicionales mexicanas. Zapateado, jarabes y sones que honran nuestra cultura.</p>
-            <div class="card__meta">
-              <span class="card__meta-item">📅 Mié, Vie</span>
-              <span class="card__meta-item">⏱ 75 min</span>
-              <span class="card__meta-item">🎯 Todos los niveles</span>
+            <div class="nivel-header__right">
+              <span class="nivel-header__tag" style="background: rgba(249,115,22,0.15); color: #f97316;">Medio-Alto</span>
+              <span class="nivel-header__icon">+</span>
+            </div>
+          </button>
+          <div class="nivel-body">
+            <div class="nivel-body__layout">
+              <div class="nivel-body__img">
+                <img src="Fotos/DSC_2922.jpg" alt="Clase Intermedio Avanzado">
+              </div>
+              <div class="nivel-body__text">
+                <h4>CLASE INTERMEDIO / AVANZADO</h4>
+                <div class="nivel-difficulty">
+                  <span class="nivel-difficulty__label">Dificultad</span>
+                  <div class="nivel-difficulty__bar"><div class="nivel-difficulty__fill" style="width: 70%; background: #f97316;"></div></div>
+                </div>
+                <p>Una experiencia de ritmo intenso diseñada para bailarines con <strong>base sólida y dominio técnico</strong> que buscan llevar su nivel al máximo. Aquí trabajarás <strong>complejidad, precisión y velocidad</strong>, enfrentando coreografías desafiantes que te impulsarán a superarte.</p>
+              </div>
             </div>
           </div>
         </div>
-
-        <!-- Stretching -->
-        <div class="card">
-          <div class="card__image">
-            <img src="Fotos/DSC_2929.jpg" alt="Clase de Stretching y Flexibilidad">
-            <div class="card__image-overlay">
-              <a href="contacto.html" class="btn btn--small btn--primary">Inscribirse</a>
+        <div class="nivel-item" data-color="#ef4444">
+          <button class="nivel-header">
+            <div class="nivel-header__left">
+              <span class="nivel-header__num">05</span>
+              <span class="nivel-header__name">Avanzado</span>
+            </div>
+            <div class="nivel-header__right">
+              <span class="nivel-header__tag" style="background: rgba(239,68,68,0.15); color: #ef4444;">Alto</span>
+              <span class="nivel-header__icon">+</span>
+            </div>
+          </button>
+          <div class="nivel-body">
+            <div class="nivel-body__layout">
+              <div class="nivel-body__img">
+                <img src="Fotos/DSC_2928.jpg" alt="Clase Avanzada">
+              </div>
+              <div class="nivel-body__text">
+                <h4>CLASE AVANZADA</h4>
+                <div class="nivel-difficulty">
+                  <span class="nivel-difficulty__label">Dificultad</span>
+                  <div class="nivel-difficulty__bar"><div class="nivel-difficulty__fill" style="width: 90%; background: #ef4444;"></div></div>
+                </div>
+                <p>Diseñada para bailarines de <strong>nivel profesional</strong>, esta clase te reta a perfeccionar tu técnica, dominar la complejidad de las coreografías y alcanzar tu <strong>máximo potencial artístico y físico</strong>.</p>
+              </div>
             </div>
           </div>
-          <div class="card__content">
-            <span class="card__tag">Bienestar corporal</span>
-            <h3 class="card__title">Stretching & Flexibilidad</h3>
-            <p class="card__desc">Mejora tu rango de movimiento y previene lesiones con sesiones guiadas de estiramiento profundo y relajación.</p>
-            <div class="card__meta">
-              <span class="card__meta-item">📅 Lun - Vie</span>
-              <span class="card__meta-item">⏱ 45 min</span>
-              <span class="card__meta-item">🎯 Todos los niveles</span>
+        </div>
+        <div class="nivel-item" data-color="#0d7377">
+          <button class="nivel-header">
+            <div class="nivel-header__left">
+              <span class="nivel-header__num">06</span>
+              <span class="nivel-header__name">Abierto</span>
+            </div>
+            <div class="nivel-header__right">
+              <span class="nivel-header__tag" style="background: rgba(13,115,119,0.2); color: var(--primary-light);">Todos</span>
+              <span class="nivel-header__icon">+</span>
+            </div>
+          </button>
+          <div class="nivel-body">
+            <div class="nivel-body__layout">
+              <div class="nivel-body__img">
+                <img src="Fotos/DSC_2929.jpg" alt="Clase Nivel Abierto">
+              </div>
+              <div class="nivel-body__text">
+                <h4>CLASE DE NIVEL ABIERTO</h4>
+                <div class="nivel-difficulty">
+                  <span class="nivel-difficulty__label">Dificultad</span>
+                  <div class="nivel-difficulty__bar"><div class="nivel-difficulty__fill" style="width: 10%; background: #0d7377;"></div></div>
+                </div>
+                <p>Un espacio para <strong>conectar, aprender y disfrutar del baile</strong> sin importar tu experiencia. Ya seas principiante o avanzado, aquí encontrarás retos a tu medida y un ambiente de apoyo que te inspirará a seguir creciendo.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -287,7 +288,7 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <img src="Logos/IMG-20220317-WA0044.jpg" alt="GUDAS STUDIO">
+          <img src="Logos/GS-4.png" alt="GUDAS STUDIO">
           <p>Estudio de baile dedicado a transformar vidas a través del movimiento y la expresión artística en Atlixco, Puebla.</p>
           <div class="footer__social">
             <a href="#" aria-label="Facebook">📘</a>
